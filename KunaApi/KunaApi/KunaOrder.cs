@@ -35,7 +35,7 @@ namespace KunaApi
                 AvgPrice = Convert.ToDouble((json["avg_price"] as JValue).Value.ToString(), CultureInfo.InvariantCulture),
                 State = (json["state"] as JValue).Value.ToString(),
                 Market = (json["market"] as JValue).Value.ToString(),
-                CreatedAt = DateTime.Parse((json["created_at"] as JValue).Value.ToString()),
+                CreatedAt = ((DateTime)((json["created_at"] as JValue).Value)).ToUniversalTime(),
                 Volume = Convert.ToDouble((json["volume"] as JValue).Value.ToString(), CultureInfo.InvariantCulture),
                 RemainingVolume = Convert.ToDouble((json["remaining_volume"] as JValue).Value.ToString(), CultureInfo.InvariantCulture),
                 ExecutedVolume = Convert.ToDouble((json["executed_volume"] as JValue).Value.ToString(), CultureInfo.InvariantCulture),
