@@ -2,8 +2,6 @@
 
 [Kuna.io](https://kuna.io)
 
-If this code was helpful for you and you want to say 'thanks', you are welcome. BTC: **1H1UFRLfcNkMLVWxDowrPgyWLesDyVnJuA**
-
 ## Usage
 
 ```cs
