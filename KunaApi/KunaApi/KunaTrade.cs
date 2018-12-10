@@ -28,7 +28,7 @@ namespace KunaApi
                 Volume = Convert.ToDouble((json["volume"] as JValue).Value.ToString(), CultureInfo.InvariantCulture),
                 Funds = json["funds"] != null ? Convert.ToDouble((json["funds"] as JValue).Value.ToString(), CultureInfo.InvariantCulture) : 0,
                 Market = (json["id"] as JValue).Value.ToString(),
-                CreatedAt = (DateTime)((json["created_at"] as JValue).Value),
+                CreatedAt = ((DateTime)((json["created_at"] as JValue).Value)).ToUniversalTime(),
                 Side = (json["side"] as JValue).Value != null ? (json["side"] as JValue).Value.ToString() : "null"
             };
         }
